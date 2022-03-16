@@ -89,7 +89,9 @@
     "yaml": "^1.10.2"
   },
   "scripts": {
-    "project": "npx tailwindcss -i ./src/style.css -o ./public/style.css --watch",
+    "project": "npx tailwindcss -i ./src/style.css -o ./public/style.css",
+    "watch": "npx tailwindcss --postcss  -i ./src/style.css -o ./public/style.css --watch",
+    "build" : "NODE_ENV=production npx tailwindcss --postcss  -i ./src/style.css -o ./public/style.css",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d public"
   },

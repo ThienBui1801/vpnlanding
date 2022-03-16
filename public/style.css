@@ -565,11 +565,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2rem;
 }
 
-.mx-6{
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
 .ml-auto{
   margin-left: auto;
 }
@@ -622,10 +617,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 2.25rem;
 }
 
-.block{
-  display: block;
-}
-
 .inline-block{
   display: inline-block;
 }
@@ -654,16 +645,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 3rem;
 }
 
-.w-2\/5{
-  width: 40%;
+.w-32{
+  width: 8rem;
 }
 
 .w-2\/6{
   width: 33.333333%;
-}
-
-.w-32{
-  width: 8rem;
 }
 
 .-translate-x-1\/2{
@@ -837,10 +824,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pb-4{
   padding-bottom: 1rem;
-}
-
-.pl-4{
-  padding-left: 1rem;
 }
 
 .text-center{
@@ -1193,57 +1176,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-@media (min-width: 740px) and (max-width: 1023px){
-  .tablet\:justify-center{
-    justify-content: center;
-  }
-}
-
 @media (max-width: 739px){
-  .mobile\:ml-0{
-    margin-left: 0px;
-  }
-
-  .mobile\:mt-32{
-    margin-top: 8rem;
-  }
-
   .mobile\:mt-40{
     margin-top: 10rem;
   }
 
-  .mobile\:w-1\/2{
-    width: 50%;
+  .mobile\:ml-0{
+    margin-left: 0px;
   }
 
   .mobile\:w-3\/4{
     width: 75%;
   }
 
-  .mobile\:w-full{
-    width: 100%;
-  }
-
   .mobile\:flex-col{
     flex-direction: column;
-  }
-
-  .mobile\:items-center{
-    align-items: center;
-  }
-
-  .mobile\:justify-around{
-    justify-content: space-around;
-  }
-
-  .mobile\:px-8{
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .mobile\:px-3{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+
+  .mobile\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .mobile\:py-20{
@@ -1254,10 +1211,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .mobile\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .mobile\:text-left{
-    text-align: left;
   }
 
   .mobile\:text-center{
@@ -1272,10 +1225,5 @@ Ensure the default browser behavior of the `hidden` attribute.
   .mobile\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-
-  .mobile\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 }
