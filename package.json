@@ -6,6 +6,7 @@
   },
   "name": "vpnpage",
   "version": "1.0.0",
+  "homepage": "https://thienbui1801.github.io/vpnpage/",
   "main": "postcss.config.js",
   "dependencies": {
     "acorn": "^7.4.1",
@@ -88,7 +89,9 @@
     "yaml": "^1.10.2"
   },
   "scripts": {
-    "project": "npx tailwindcss -i ./src/style.css -o ./public/style.css --watch"
+    "project": "npx tailwindcss -i ./src/style.css -o ./public/style.css --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "",
