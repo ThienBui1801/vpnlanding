@@ -22,6 +22,10 @@ module.exports = {
       'mobile': {'max': '739px'},
       // Mobile
     },
+
+    color: {
+      
+    }
   },
   variants: {
     extend: {},

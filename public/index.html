@@ -29,18 +29,19 @@
 
         <!-- Menu list-->
         <ul id="menu" class="nav-list ml-auto invisible laptop:visible">
-          <li class="py-4 px-2"><a href="#" class="menu-list">About</a></li>
-          <li class="py-4 px-2"><a href="#" class="menu-list">Features</a></li>
-          <li class="py-4 px-2"><a href="#" class="menu-list">Pricing</a></li>
-          <li class="py-4 px-2"><a href="#" class="menu-list">Testimonials</a></li>
-          <li class="py-4 px-2"><a href="#" class="menu-list">Contact</a></li>
-          <li class="py-4 px-2"><a href="#" class="menu-list">Help</a></li>
+          <li class="py-4 px-3"><a href="#" class="menu-list">About</a></li>
+          <li class="py-4 px-3"><a href="#" class="menu-list">Features</a></li>
+          <li class="py-4 px-3"><a href="#" class="menu-list">Pricing</a></li>
+          <li class="py-4 px-3"><a href="#" class="menu-list">Testimonials</a></li>
+          <li class="py-4 px-3"><a href="#" class="menu-list">Contact</a></li>
+          <li class="py-4 px-3"><a href="#" class="menu-list">Help</a></li>
         </ul>
 
         <!-- Login -->
         <div class="invisible laptop:visible">
-          <button class="font-bold px-4">Sign In</button>
-          <button class="font-bold px-6 py-2 text-red-500 border-solid border-2 border-red-500 rounded-3xl">
+          <button id="sign-in" class="font-bold px-4">Sign In</button>
+          <button id="sign-up"
+            class="font-bold px-6 py-2 text-red-500 border-solid border-2 border-red-500 rounded-3xl">
             Sign Up
           </button>
         </div>
@@ -56,15 +57,69 @@
     </div>
   </header>
 
+  <!-- Modal SignIn -->
+  <section>
+    <div id="modal-sign-in" class="sign invisible">
+      <div id="modal-in-container" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-300 rounded-2xl py-10 px-4 w-2/5">
+        <button id="in-close" class="absolute top-5 right-5 bg-yellow-50 text-amber-400 p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+
+        <form class="flex flex-col mt-5">
+          <label class="text-2xl text-white" for="user">Username</label>
+          <input class="flex-1 mt-2 mb-4 py-3 pl-2 rounded-xl" id="user" type="text" placeholder="Username">
+          <label class="text-2xl text-white" for="password">Password</label>
+          <input class="flex-1 mt-2 mb-4 py-3 pl-2 rounded-xl" id="password" type="text" placeholder="Password">
+        </form>
+
+        <div class="text-center mt-7">
+          <button class="bg-green-400 hover:bg-green-600 mx-4 py-2 px-10 text-white font-bold uppercase rounded-full">Sign In</button>
+          <button class="bg-red-500 hover:bg-red-600 mx-4 py-2 px-10 text-white font-bold uppercase rounded-full">Forget Password</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal SignUp -->
+  <section>
+    <div id="modal-sign-up" class="sign invisible">
+      <div id="modal-up-container" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-300 rounded-2xl py-10 px-4 w-2/5">
+        <button id="up-close" class="absolute top-5 right-5 bg-green-50 text-amber-400 p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+
+        <form class="flex flex-col mt-5">
+          <label class="text-2xl text-white" for="user">Username</label>
+          <input class="flex-1 mt-2 mb-4 py-3 pl-2 rounded-xl" id="user" type="text" placeholder="Username">
+          <label class="text-2xl text-white" for="password">Password</label>
+          <input class="flex-1 mt-2 mb-4 py-3 pl-2 rounded-xl" id="password" type="text" placeholder="Password">
+        </form>
+
+        <div class="text-center mt-7">
+          <button class="bg-blue-400 hover:bg-blue-600 mx-4 py-2 px-10 text-white font-bold uppercase rounded-full">Sign up</button>
+          <button class="bg-yellow-500 hover:bg-yellow-600 mx-4 py-2 px-10 text-white font-bold uppercase rounded-full">Reset</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Banner -->
   <section class="relative top-24">
     <div class="container mx-auto px-10 mobile:px-3 mt-24">
       <div class="flex flex-col laptop:flex-row justify-between items-center">
         <div class="laptop:w-1/2 text-center laptop:text-left">
-          <h1 class="font-bold mobile:text-3xl text-5xl leading-tight mb-7">Want anything to be <br /> easy with 
+          <h1 class="font-bold mobile:text-3xl text-5xl leading-tight mb-7">Want anything to be <br /> easy with
             <span class="font-bold">LaslesVPN</span></h1>
-          <p class="text-gray-400 mobile:text-xs font-medium mb-8">Provide a network for all your needs with ease and fun using <br /> <strong
-              class="text-gray-600">LaslesVPN</strong> 
+          <p class="text-gray-400 mobile:text-xs font-medium mb-8">Provide a network for all your needs with ease and
+            fun using <br /> <strong class="text-gray-600">LaslesVPN</strong>
             discover interesting features from us</p>
           <button class="vpn-btn mb-6">
             Ger Started
@@ -143,7 +198,8 @@
         </div>
 
         <div class="laptop:w-1/2 w-full mt-8 laptop:mt-0 ml-6 mobile:ml-0">
-          <h2 class="font-bold mobile:text-3xl text-4xl leading-tight mb-6 text-center laptop:text-left">We Provide Many <br /> Features You Can Use</h2>
+          <h2 class="font-bold mobile:text-3xl text-4xl leading-tight mb-6 text-center laptop:text-left">We Provide Many
+            <br /> Features You Can Use</h2>
           <p class="text-gray-400 mobile:text-xs mobile:text-center font-medium mb-6">
             You can explore the features that we provide with fun and <br />
             have their own functions each feature.
@@ -470,7 +526,8 @@
       <div class="pt-10">
         <!-- Title -->
         <div class="text-center">
-          <h2 class="font-bold mobile:text-3xl text-4xl mb-6 leading-snug">Trusted by Thousands <br /> of Happy Customer</h2>
+          <h2 class="font-bold mobile:text-3xl text-4xl mb-6 leading-snug">Trusted by Thousands <br /> of Happy Customer
+          </h2>
           <p class="text-gray-400 my-8">These are the stories of our customers who have joined us with great <br />
             pleasure when using this crazy feature.</span></p>
         </div>
@@ -555,7 +612,8 @@
   <!-- Subscribe -->
   <section>
     <div class="container mx-auto mobile:px-8 px-28">
-      <div class="flex flex-col laptop:flex-row justify-between items-center mobile:px-3 px-10 py-12 bg-white shadow-2xl rounded-3xl">
+      <div
+        class="flex flex-col laptop:flex-row justify-between items-center mobile:px-3 px-10 py-12 bg-white shadow-2xl rounded-3xl">
         <div class="text-center laptop:text-left mb-9">
           <h1 class="font-bold mobile:text-3xl text-4xl leading-tight mb-4">
             Subscribe Now for
