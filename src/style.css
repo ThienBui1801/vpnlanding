@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-list {
+  @apply
+  font-bold 
+  text-gray-400
+  hover:text-red-600 
+  transition 
+  duration-300 
+  ease-in
+}
+
+.nav-list {
+  @apply 
+  fixed 
+  flex 
+  flex-col 
+  justify-center 
+  items-center 
+  top-0 
+  left-0 
+  h-full 
+  w-full 
+  px-6 
+  z-10
+  bg-yellow-300 
+  laptop:w-auto
+  laptop:bg-transparent 
+  laptop:flex-row 
+  laptop:h-auto 
+  laptop:static 
+  laptop:justify-between
+}
+
+.vpn-btn {
+  @apply
+  py-4 
+  px-20 
+  bg-red-600 
+  text-white 
+  border-white 
+  border-2 
+  font-bold 
+  rounded-xl 
+  hover:bg-white 
+  hover:text-red-600 
+  hover:border-2 
+  hover:border-red-600
+  transition
+  duration-500
+  ease-in-out
+}
+
+.services-box {
+  @apply
+  border-4 
+  border-gray-400 
+  laptop:w-1/3
+  w-full
+  py-14 
+  px-6
+  mx-6
+  mb-9
+  bg-white 
+  rounded-xl 
+  hover:border-red-400
+  transition
+  duration-300
+  ease-in-out
+}
+
+.services-btn {
+  @apply
+  py-2 
+  px-14 
+  border-2 
+  border-red-500 
+  rounded-3xl 
+  font-extrabold 
+  text-red-600 
+  hover:bg-orange-700 
+  hover:text-white
+  transition
+  duration-300
+  ease-in-out
+}
+
+.customer-box {
+  @apply
+  laptop:w-1/3 
+  w-auto
+  border-2 
+  border-gray-200 
+  py-10 
+  px-3 
+  mx-4
+  mb-9
+  rounded-2xl 
+  hover:border-2 
+  hover:border-red-600 
+  transition 
+  duration-500 
+  ease-out
+}
+
+.footer-list {
+  @apply
+  pb-2 
+  font-bold
+  text-gray-400 
+  hover:text-red-500 
+  hover:underline 
+  hover:font-semibold 
+  transition 
+  duration-150 
+  ease-linear
+}
